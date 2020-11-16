@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename ='assets/images/logo1-121x121.png') }}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Consultar Receita Medico</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/tether/tether.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/dropdown/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/socicon/css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/theme/css/style.css') }}">
+  <link rel="preload" as="style" href="{{ url_for('static', filename ='assets/mobirise/css/mbr-additional.css') }}"><link rel="stylesheet" href="{{ url_for('static', filename ='assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+  
+</head>
+<body>
+  
+  <section class="menu menu1 cid-sdB84ospWv" once="menu" id="menu1-3s">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="{{ url_for('paciente.paciente_') }}">
+                        <img src="{{ url_for('static', filename ='assets/images/logo1-121x121.png') }}" alt="" style="height: 5rem;">
+                    </a>
+                </span>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('paciente.paciente_') }}">
+                            Início</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('Receita.index') }}">
+                            Sair</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="mbr-section form3 cid-sdzXJh6EgU" id="form3-2j">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="align-center pb-2 mbr-fonts-style display-2"><strong>Consultar Receita</strong></h2>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features7 cid-sdx3u23oEi" id="features8-2c">
+    <!---->
+    
+    {% for dado in dados %}
+    {% if dado %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                
+                
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-7"><strong>{{ dado[0] }}</strong></h6>
+                        <p class="mbr-text cost mbr-fonts-style display-7"><strong>IDRECEITA {{ dado[1] }}</strong></p>
+                    </div>
+                    <div class="bottom-line">
+                    <p class="mbr-text mbr-fonts-style display-7"><strong>Data da Receita: </strong>{{ dado[2] }} 
+                    <br><strong>CPF:</strong> {{ dado[3] }}
+                    <br><strong>Prescrição:</strong> {{ dado[4] }} 
+                    <br>
+                    <br>Dr(a) {{ dado[5] }} | CRM {{ dado[6] }}</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {% else %}
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                
+                
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-7"><strong>Não há informações</strong></h6>
+                        <p class="mbr-text cost mbr-fonts-style display-7"><strong>IDRECEITA {{ dado[1] }}</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    {% endif %}
+{% endfor %}
+</section>
+
+<section class="footer7 cid-sdwiHzuQY7" once="footers" id="footer7-1p">
+
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">MedOn&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"> <a href="https://mobirise.site/e" style="color:#aaa;"></a> </p></section><script src="{{ url_for('static', filename ='assets/web/assets/jquery/jquery.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/popper/popper.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/tether/tether.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/bootstrap/js/bootstrap.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/smoothscroll/smooth-scroll.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/dropdown/js/nav-dropdown.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/dropdown/js/navbar-dropdown.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/touchswipe/jquery.touch-swipe.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/theme/js/script.js') }}"></script>    
+  
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename ='assets/images/logo1-121x121.png') }}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Cadastrar Receita</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/tether/tether.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/dropdown/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/socicon/css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/theme/css/style.css') }}">
+  <link rel="preload" as="style" href="{{ url_for('static', filename ='assets/mobirise/css/mbr-additional.css') }}"><link rel="stylesheet" href="{{ url_for('static', filename ='assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu menu1 cid-sdB7ARo9y0" once="menu" id="menu1-3q">
+    
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="{{ url_for('medico.medico_') }}">
+                        <img src="{{ url_for('static', filename ='assets/images/logo1-121x121.png') }}" alt="" style="height: 5rem;">
+                    </a>
+                </span>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('medico.medico_') }}">
+                            Início</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('Receita.index') }}">
+                            Sair</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="mbr-section form1 cid-sdA691HpRZ" id="form1-34">
+
+    
+
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2"><strong>
+                    Cadastrar Receita</strong></h2>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="media-container-column col-lg-8" data-form-type="formoid">
+                <!---Formbuilder Form--->
+                <form  method="POST" action="{{ url_for('medico.cadastrarreceita')}}" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="Vwbg+Vkn7wydttNvO8qBZZ6fzEO7vg5QSMsuVhojlxOWtfPkXqCjzOnEPTF5EnL7N8c17EVyrWn2TYDJPpPdOZv1HqZhw/OT4X3W5z+ioimor8WRDLk0FIiHSgTi75jz">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                        </div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-md-4  form-group" data-for="email">
+                            <label for="email-form1-34" class="form-control-label mbr-fonts-style display-7">CPF do Paciente</label>
+                            <input  name="cpf" required="required" class="form-control display-7" id="email-form1-34">
+                        </div>
+                        <div class="col-md-4  form-group" data-for="email">
+                            <label for="email-form1-34" class="form-control-label mbr-fonts-style display-7">CRM Médico</label>
+                            <input  name="crm" required="required" class="form-control display-7" id="email-form1-34">
+                        </div>
+                        <div data-for="message" class="col-md-12 form-group">
+                            <label for="message-form1-34" class="form-control-label mbr-fonts-style display-7">Prescrição</label>
+                            <textarea name="prescricao" data-form-field="Message" class="form-control display-7" id="message-form1-34"></textarea>
+                        </div>
+                        <div class="col-md-12 input-group-btn align-center">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+                        </div>
+                    </div>
+                </form><!---Formbuilder Form--->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer7 cid-sdwiHzuQY7" once="footers" id="footer7-1h">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">MedOn&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"> <a href="https://mobirise.site/e" style="color:#aaa;"></a> </p></section><script src="{{ url_for('static', filename ='assets/web/assets/jquery/jquery.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/popper/popper.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/tether/tether.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/bootstrap/js/bootstrap.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/smoothscroll/smooth-scroll.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/dropdown/js/nav-dropdown.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/dropdown/js/navbar-dropdown.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/touchswipe/jquery.touch-swipe.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/theme/js/script.js') }}"></script>    
+  
+</body>
+</html>

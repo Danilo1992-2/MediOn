@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html  >
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename ='assets/images/logo1-121x121.png') }}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/tether/tether.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/dropdown/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/formstyler/jquery.formstyler.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/formstyler/jquery.formstyler.theme.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/datepicker/jquery.datetimepicker.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/socicon/css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename ='assets/theme/css/style.css') }}">
+  <link rel="preload" as="style" href="{{ url_for('static', filename ='assets/mobirise/css/mbr-additional.css') }}"><link rel="stylesheet" href="{{ url_for('static', filename ='assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu menu2 cid-sdA0QcopC7" once="menu" id="menu2-2y">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="{{ url_for('Receita.index') }}">
+                        <img src="{{ url_for('static', filename ='assets/images/logo1-121x121.png') }}" alt="" style="height: 5rem;">
+                    </a>
+                </span>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('Receita.index') }}">
+                            Início</a></li>
+                    </ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="form7 cid-sdA0QdKeTk" id="form7-2z">
+    
+    <div class="mbr-overlay"></div>
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Painel de Acesso Farmácia</strong></h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form method="POST" action="{{ url_for('farmacia.loginfarmacia') }}"  class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="Raa4jHOqtRh3FrtzoU4WEreRqdZIEVOLcrRa2FFDC+MEcc3di5t4rfvfsKbecvYT8rqKdyRRo+mgTb2XCe/aMl1Lv4DqPt+CFEdoBTBYvEBQD7GZIoUtTZ+bf6UhXsKy">
+                    <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">Bem Vindo ao MediOn</p>
+                    <div class="">
+                        
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="name">
+                            <input type="text" name="login" placeholder="Login" data-form-field="name" class="form-control" value="" id="name-form7-2z">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="email">
+                            <input type="password" name="senha" placeholder="Senha" data-form-field="email" class="form-control">
+                        </div>
+                        
+                        <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-primary display-4">Entrar</button></div>
+                    </div>
+    
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer7 cid-sdA0QfnEWv" once="footers" id="footer7-30">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">MedOn&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"> <a href="https://mobirise.site/e" style="color:#aaa;"></a> </p></section><script src="{{ url_for('static', filename ='assets/web/assets/jquery/jquery.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/popper/popper.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/tether/tether.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/bootstrap/js/bootstrap.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/smoothscroll/smooth-scroll.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/dropdown/js/nav-dropdown.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/dropdown/js/navbar-dropdown.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/touchswipe/jquery.touch-swipe.min.js') }}"></script>  <script src="{{ url_for('static', filename ='assets/theme/js/script.js') }}"></script>    
+  
+</body>
+</html>
