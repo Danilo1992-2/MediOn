@@ -76,8 +76,7 @@ def venderReceita(id):
     try:
         if request.method == 'POST':
             receita.vender(id)
-            return render_template('/farmacia')
-        return render_template('/consultareceitafarmacia')
+            return redirect('/farmacia')
     except:
         pass
-    return render_template('/consultareceitafarmacia')
+    return redirect('/farmacia')
