@@ -84,6 +84,11 @@
                         <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-primary display-4">Entrar</button></div>
                     </div>
                 </form>
+                {% if Erro %}
+                    <div class="alert alert-danger" role="alert">
+                        <br>{{ Erro }}
+                    </div>
+                {% endif%}
             </div>
         </div>
     </div>

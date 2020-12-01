@@ -87,8 +87,11 @@
                     </div>
     
                 </form>
-                
-
+                {% if Erro %}
+                <div class="alert alert-danger" role="alert">
+                    <br>{{ Erro }}
+                  </div>
+                {% endif%}
             </div>
         </div>
     </div>

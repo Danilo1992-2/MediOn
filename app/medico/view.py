@@ -9,16 +9,19 @@ medico = Blueprint('medico',__name__)
 
 @medico.route('/loginmedico',methods=['GET','POST'])
 def loginmedico():
+    Erro = None
     if request.method == 'POST':
         try:
             login = request.form['login']
             senha = request.form['senha']
             senhaInBd = [i for i in db.engine.execute(f"select senha from medico where cpf ='{login}'")]
             if check_password_hash(senhaInBd[0][0],senha):
-                return render_template('medico.html')
+                return redirect('/medico')
+            Erro = "Verifique suas credenciais"
         except:
+            Erro = "Verifique suas credenciais"
             pass
-    return render_template('loginmedico.html')
+    return render_template('loginmedico.html',Erro =Erro)
 
 @medico.route('/medico',methods=['GET','POST'])
 def medico_():

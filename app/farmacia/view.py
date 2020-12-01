@@ -8,16 +8,20 @@ farmacia = Blueprint('farmacia',__name__)
 
 @farmacia.route('/loginfarmacia',methods=['GET','POST'])
 def loginfarmacia():
+    Erro = None
     if request.method == 'POST':
         try:
             login = request.form['login']
             senha = request.form['senha']
             senhaInBd = [i for i in db.engine.execute(f"select senha from farmacia where cnpj ='{login}'")]
+            print(check_password_hash(senhaInBd[0][0],senha))
             if check_password_hash(senhaInBd[0][0],senha):
-                return render_template('farmacia.html')
+                return redirect('/farmacia')
+            Erro = "Verifique suas credenciais"
         except:
+            Erro = "Verifique suas credenciais"
             pass
-    return render_template('loginfarmacia.html')
+    return render_template('loginfarmacia.html',Erro =Erro)
 
 @farmacia.route('/farmacia')
 def farmacia_():

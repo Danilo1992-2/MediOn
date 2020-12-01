@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, url_for,request
+from flask import Blueprint, redirect, render_template, url_for,request,flash
 from werkzeug.security import generate_password_hash,check_password_hash
 from app.app import db
 
@@ -7,6 +7,7 @@ admin = Blueprint('admin',__name__)
 
 @admin.route("/loginAdmin",methods=['GET','POST'])
 def login():
+    Erro = None
     if request.method == 'POST':
         try:
             login = request.form['login']
@@ -14,6 +15,9 @@ def login():
             senhaInBd = [i for i in db.engine.execute(f"select password from adminlogin   where cpf ='{login}'")]
             if senhaInBd[0][0] == senha:
                 return redirect('/consultarDados')
+            else:
+                Erro = "Verifique suas credenciais"
+                return render_template('loginAdmin.html',Erro =Erro)
         except:
             pass
     return render_template('loginAdmin.html')
